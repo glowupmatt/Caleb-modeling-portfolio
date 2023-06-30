@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.scss";
+import NavBar from "./Components/NavBar";
+import ImageSlider from "./Components/ImageSlider";
+import { About } from "./Components/About";
+import ImageCarousel from "./Components/ImageCarousel";
 
-function App() {
+const App = () => {
+  const [navBarOpen, setNavBarOpen] = useState(false);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={navBarOpen === true ? "navBarOpened" : "App"}>
+      <NavBar navBarOpen={navBarOpen} setNavBarOpen={setNavBarOpen} />
+      <ImageSlider />
+      <About />
+      <ImageCarousel />
     </div>
   );
-}
+};
 
 export default App;

@@ -1,0 +1,44 @@
+.nav-container {
+  position: absolute;
+  z-index: 50;
+  width: 100%;
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    h2 {
+      font-size: 1rem;
+    }
+    .mobile-container {
+      button {
+        border: none;
+        background: none;
+        cursor: pointer;
+      }
+    }
+  }
+  .mobile-nav-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+    .mobile-nav {
+      display: grid;
+      gap: 3rem;
+      width: 90%;
+      justify-content: center;
+      align-items: center;
+      background-color: gray;
+      padding: 2rem;
+      border-radius: 1rem;
+      a {
+        list-style: none;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+}

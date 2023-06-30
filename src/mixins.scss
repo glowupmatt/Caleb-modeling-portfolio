@@ -1,0 +1,11 @@
+@mixin selected-section {
+  font-weight: bold;
+}
+@mixin page-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+@mixin photo-desc {
+  font-size: 18px;
+  font-weight: 300;
+}
