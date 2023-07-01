@@ -3,6 +3,7 @@ import "./App.scss";
 import NavBar from "./Components/NavBar";
 import ImageSlider from "./Components/ImageSlider";
 import { About } from "./Components/About";
+import Videos from "./Components/Videos";
 import ImageCarousel from "./Components/ImageCarousel";
 import { EmblaOptionsType } from "embla-carousel-react";
 import "./embla.scss";
@@ -19,6 +20,7 @@ const App = () => {
       <ImageSlider />
       <About />
       <ImageCarousel slides={SLIDES} options={OPTIONS} />
+      <Videos />
     </div>
   );
 };
