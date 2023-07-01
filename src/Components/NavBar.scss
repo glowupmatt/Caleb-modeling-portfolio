@@ -1,9 +1,12 @@
 .nav-container {
-  position: absolute;
+  position: sticky;
+  top: 0;
   z-index: 50;
   width: 100%;
-  nav {
+  background-color: rgba(170, 170, 170, 0.531);
+  .logo-hamburger {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
@@ -15,6 +18,9 @@
         border: none;
         background: none;
         cursor: pointer;
+        img {
+          width: 1.5rem;
+        }
       }
     }
   }
@@ -24,6 +30,8 @@
     align-items: center;
     margin-top: 1rem;
     width: 100%;
+    position: absolute;
+    top: 5rem;
     .mobile-nav {
       display: grid;
       gap: 3rem;

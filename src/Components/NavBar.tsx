@@ -15,8 +15,8 @@ const NavBar: React.FC<propsType> = ({
     setNavBarOpen((prev) => !prev);
   };
   return (
-    <div className="nav-container">
-      <nav>
+    <nav className="nav-container">
+      <div className="logo-hamburger">
         <h2>
           Caleb
           <br /> Moore
@@ -24,13 +24,13 @@ const NavBar: React.FC<propsType> = ({
         <div className="mobile-container">
           <button onClick={handleNav}>
             {navBarOpen ? (
-              <img alt="" src="../../icon-close.svg" />
+              <img alt="" src="/xmark-solid (1).svg" />
             ) : (
-              <img alt="" src="../../icon-hamburger.svg" />
+              <img alt="" src="/icon-hamburger.svg" />
             )}
           </button>
         </div>
-      </nav>
+      </div>
       {navBarOpen ? (
         <motion.div
           initial={{
@@ -55,7 +55,7 @@ const NavBar: React.FC<propsType> = ({
       ) : (
         <div></div>
       )}
-    </div>
+    </nav>
   );
 };
 
