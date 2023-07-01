@@ -8,11 +8,13 @@ import ImageCarousel from "./Components/ImageCarousel";
 const App = () => {
   const [navBarOpen, setNavBarOpen] = useState(false);
   return (
-    <div className={navBarOpen === true ? "navBarOpened" : "App"}>
+    <div className="App">
       <NavBar navBarOpen={navBarOpen} setNavBarOpen={setNavBarOpen} />
       <ImageSlider />
       <About />
-      <ImageCarousel />
+      <div>
+        <ImageCarousel />
+      </div>
     </div>
   );
 };
