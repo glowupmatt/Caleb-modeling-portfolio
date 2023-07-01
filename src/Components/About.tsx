@@ -23,7 +23,7 @@ export const About = () => {
             mollis nunc neque, quis eleifend eros sollicitudin quis.
           </p>
         </div>
-        <div className="about-left-section">
+        <div className="about-right-section">
           <p>
             "The desire to create is one of the deepest yearnings of the human
             soul." – Dieter F. Uchtdorf

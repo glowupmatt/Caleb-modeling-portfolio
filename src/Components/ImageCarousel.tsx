@@ -3,11 +3,7 @@ import useEmblaCarousel, {
   EmblaCarouselType,
   EmblaOptionsType,
 } from "embla-carousel-react";
-import {
-  DotButton,
-  PrevButton,
-  NextButton,
-} from "./EmblaCarouselArrowsDotsButtons";
+import { PrevButton, NextButton } from "./EmblaCarouselArrowsDotsButtons";
 import imageByIndex from "./imageByIndex";
 import "../embla.scss";
 import "./ImageCarousel.scss";
@@ -79,15 +75,6 @@ const ImageCarousel: React.FC<PropType> = (props) => {
           </div>
           <PrevButton onClick={scrollPrev} enabled={prevBtnEnabled} />
           <NextButton onClick={scrollNext} enabled={nextBtnEnabled} />
-          <div className="embla__dots">
-            {scrollSnaps.map((_, index) => (
-              <DotButton
-                key={index}
-                selected={index === selectedIndex}
-                onClick={() => scrollTo(index)}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </>

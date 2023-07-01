@@ -1,6 +1,6 @@
 export const HeroImageSlider: { image: string }[] = [
   {
-    image: "../../imageSlider/IMG_1082.jpeg",
+    image: "../../imageSlider/IMG_1082_3.png",
   },
   {
     image: "../../imageSlider/LB_CC23C_Caleb_2_B.jpg",
