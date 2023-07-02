@@ -10,7 +10,7 @@ const ImageSlider = () => {
     <div className="image-slider">
       {HeroImageSlider.map((img, index) => {
         return (
-          <div className="image-container">
+          <div key={index} className="image-container">
             <img alt="" src={img.image} className="image" />
           </div>
         );

@@ -12,7 +12,7 @@
 .contact-input-form-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
   .input,
   .input:focus,
   .input:active {
@@ -25,6 +25,18 @@
     border-bottom: solid white 1px;
     outline-style: none;
     outline-width: 0;
+  }
+
+  .required-input {
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    outline-style: none;
+    outline-width: 0;
+    border-bottom: solid red 1px;
   }
   .submit-button-container {
     padding: 1rem;
