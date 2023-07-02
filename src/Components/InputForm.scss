@@ -1,0 +1,35 @@
+.parent-input-form {
+  background-color: black;
+  padding: 1rem;
+}
+
+.form-header-container {
+  text-align: right;
+  margin-right: 1rem;
+  color: white;
+}
+
+.contact-input-form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  .input {
+    color: white;
+    background-color: black;
+    padding: 1rem;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: solid white 1px;
+  }
+  .submit-button-container {
+    padding: 1rem;
+    width: 10rem;
+    border-radius: 0.3rem;
+    border: none;
+    align-self: center;
+  }
+  ::placeholder {
+    color: gray;
+  }
+}

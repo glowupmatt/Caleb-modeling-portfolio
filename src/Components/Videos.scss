@@ -1,8 +1,19 @@
+.videos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.video-title-container {
+  margin-left: 1rem;
+}
+
 .iframe-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
   iframe {
     border: none;
   }

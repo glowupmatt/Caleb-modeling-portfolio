@@ -7,6 +7,7 @@ import Videos from "./Components/Videos";
 import ImageCarousel from "./Components/ImageCarousel";
 import { EmblaOptionsType } from "embla-carousel-react";
 import "./embla.scss";
+import InputForm from "./Components/InputForm";
 
 const OPTIONS: EmblaOptionsType = {};
 const SLIDE_COUNT = 5;
@@ -16,11 +17,14 @@ const App = () => {
   const [navBarOpen, setNavBarOpen] = useState(false);
   return (
     <div className="App">
-      <NavBar navBarOpen={navBarOpen} setNavBarOpen={setNavBarOpen} />
-      <ImageSlider />
+      <div>
+        <NavBar navBarOpen={navBarOpen} setNavBarOpen={setNavBarOpen} />
+        <ImageSlider />
+      </div>
       <About />
       <ImageCarousel slides={SLIDES} options={OPTIONS} />
       <Videos />
+      <InputForm />
     </div>
   );
 };
