@@ -3,10 +3,18 @@
   flex-direction: column;
   gap: 0.5rem;
   overflow: scroll;
-  margin-top: 1rem;
   .portfolio-title {
-    text-align: center;
-    padding: 1rem;
+    color: white;
+    height: 10rem;
+    background: no-repeat top/100%;
+    background-image: url(../../public/Headers/IMG_0493.webp);
+    h2 {
+      height: 100%;
+      display: grid;
+      text-align: center;
+      align-items: center;
+      text-shadow: -2px 5px 14px #000000;
+    }
   }
   .portfolio-container-scroll {
     display: flex;
@@ -14,12 +22,17 @@
     overflow-x: scroll;
     overflow-y: hidden;
     padding: 1rem;
-    height: 16rem;
   }
   .portfolio-grid-image {
     width: 10rem;
     border-radius: 1rem;
     height: 15rem;
+  }
+  .collection-title {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 0.5rem;
+    color: black;
   }
 }
 
