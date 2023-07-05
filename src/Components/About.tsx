@@ -5,7 +5,7 @@ import { AboutPageImages } from "../calebData/AboutPageData";
 export const About = () => {
   return (
     <div className="about-container">
-      <h2>About</h2>
+      <h2 className="about-title-container">About</h2>
       <section className="about-section-container">
         <div className="about-left-section">
           <img alt="" src={AboutPageImages.imgOne} />

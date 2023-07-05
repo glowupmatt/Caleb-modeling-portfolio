@@ -1,6 +1,8 @@
 import React, { useState, MouseEvent } from "react";
 import { motion } from "framer-motion";
 import "./NavBar.scss";
+import { Link } from "react-router-dom";
+
 interface propsType {
   navBarOpen: boolean;
   setNavBarOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -14,13 +16,40 @@ const NavBar: React.FC<propsType> = ({
     e.preventDefault();
     setNavBarOpen((prev) => !prev);
   };
+
+  const [optionsOpened, setOptionsOpened] = useState(0);
+  const navOptions = [
+    {
+      id: 0,
+      keyName: "PORTFOLIO",
+      listOptions: ["PORTRAIT", "FASHION", "AD WORK"],
+    },
+    {
+      id: 1,
+      keyName: "VIDEO",
+      listOptions: ["MUSIC VIDEO", "AD WORK"],
+    },
+    {
+      id: 2,
+      keyName: "ABOUT",
+      listOptions: [],
+    },
+    {
+      id: 3,
+      keyName: "CONTACT",
+      listOptions: [],
+    },
+  ];
+
   return (
     <nav className="nav-container">
       <div className="logo-hamburger">
-        <h2>
-          Caleb
-          <br /> Moore
-        </h2>
+        <Link to="/" className="link-styles">
+          <h2>
+            Caleb
+            <br /> Moore
+          </h2>
+        </Link>
         <div className="mobile-container">
           <button onClick={handleNav}>
             {navBarOpen ? (
@@ -30,6 +59,38 @@ const NavBar: React.FC<propsType> = ({
             )}
           </button>
         </div>
+        <ul className="nav-desktop">
+          {navOptions.map((option, index) => {
+            return (
+              <div className="nav-list" key={index}>
+                <li
+                  onClick={() => setOptionsOpened(option.id)}
+                  className="sub-nav-list"
+                >
+                  {option.keyName}
+                </li>
+                <div className="nav-list">
+                  {option.listOptions.map((item) => {
+                    if (option.id === index) {
+                      return (
+                        <li
+                          key={item}
+                          className={
+                            optionsOpened === index ? "list-open" : "list-close"
+                          }
+                        >
+                          {item}
+                        </li>
+                      );
+                    } else {
+                      <li>{item}</li>;
+                    }
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </ul>
       </div>
       {navBarOpen ? (
         <motion.div
@@ -45,9 +106,9 @@ const NavBar: React.FC<propsType> = ({
           transition={{ ease: "easeIn", duration: 0.3 }}
           className="mobile-nav-container"
         >
-          <ul className="mobile-nav">
-            <a href="#">PORTFOLIO</a>
-            <a href="#">VIDEO</a>
+          <ul className="mobile-nav" onClick={() => setNavBarOpen(false)}>
+            <Link to="portfolio/">PORTFOLIO</Link>
+            <Link to="videos/">VIDEO</Link>
             <a href="#">ABOUT</a>
             <a href="#">CONTACT</a>
           </ul>

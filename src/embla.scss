@@ -4,6 +4,11 @@
   --slide-height: 19rem;
   padding: 1.6rem;
 }
+@media (min-width: 768px) {
+  .embla {
+    --slide-size: 50%;
+  }
+}
 .embla__viewport {
   overflow: hidden;
 }
@@ -26,6 +31,12 @@
   height: var(--slide-height);
   width: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .embla__slide__img {
+    height: 100%;
+  }
 }
 .embla__slide__number {
   width: 4.6rem;
@@ -116,6 +127,12 @@
   width: 2rem;
   height: 4rem;
 }
+@media (min-width: 768px) {
+  .embla__button {
+    top: 78rem;
+  }
+}
+
 .embla__button--prev {
   left: 1.6rem;
 }

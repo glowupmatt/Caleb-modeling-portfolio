@@ -14,6 +14,7 @@ export type inputFormArrayType = {
   userInfoKey: keyof userInfoType;
   inputType: string;
   placeHolder: string;
+  pattern: string;
 };
 
 const InputForm = () => {
@@ -22,6 +23,8 @@ const InputForm = () => {
     email: "",
     phoneNumber: "",
   });
+
+  const [focused, setFocused] = useState(false);
 
   const onSubmitHandler = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -46,16 +49,19 @@ const InputForm = () => {
       userInfoKey: "name",
       inputType: "text",
       placeHolder: "Name",
+      pattern: "",
     },
     {
       userInfoKey: "email",
       inputType: "email",
       placeHolder: "Email Address",
+      pattern: "",
     },
     {
       userInfoKey: "phoneNumber",
       inputType: "number",
-      placeHolder: "Phone",
+      placeHolder: "Phone (012-345-1234)",
+      pattern: "^(+d{1,2}s)?(?d{3})?[s.-]d{3}[s.-]d{4}$",
     },
   ];
 
@@ -69,6 +75,8 @@ const InputForm = () => {
             input={input}
             userInfo={userInfo}
             setUserInfo={setUserInfo}
+            focused={focused}
+            setFocused={setFocused}
           />
         ))}
         <button className="submit-button-container" type="submit">

@@ -9,6 +9,12 @@
   color: white;
 }
 
+@media (min-width: 768px) {
+  .form-header-container {
+    font-size: 4rem;
+  }
+}
+
 .contact-input-form-container {
   display: flex;
   flex-direction: column;
@@ -19,25 +25,11 @@
     color: white;
     background-color: black;
     padding: 1rem;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    border-bottom: solid white 1px;
+    border: none;
     outline-style: none;
     outline-width: 0;
   }
 
-  .required-input {
-    color: white;
-    background-color: black;
-    padding: 1rem;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-    outline-style: none;
-    outline-width: 0;
-    border-bottom: solid red 1px;
-  }
   .submit-button-container {
     padding: 1rem;
     width: 10rem;
@@ -48,4 +40,12 @@
   ::placeholder {
     color: gray;
   }
+}
+
+.focused {
+  border: 0.5px white solid;
+}
+
+.not-focused {
+  border: 0.5px red solid;
 }

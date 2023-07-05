@@ -1,30 +1,26 @@
 import React, { useState } from "react";
 import "./App.scss";
 import NavBar from "./Components/NavBar";
-import ImageSlider from "./Components/ImageSlider";
-import { About } from "./Components/About";
-import Videos from "./Components/Videos";
-import ImageCarousel from "./Components/ImageCarousel";
-import { EmblaOptionsType } from "embla-carousel-react";
-import "./embla.scss";
-import InputForm from "./Components/InputForm";
-
-const OPTIONS: EmblaOptionsType = {};
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+import { Route, Routes } from "react-router-dom";
+import HomePage from "./Components/HomePage";
+import PhotoGrid from "./Components/PhotoGrid";
+import SelectedPhotoGrid from "./Components/SelectedPhotoGrid";
+import VideoPage from "./Components/VideoPage";
 
 const App = () => {
   const [navBarOpen, setNavBarOpen] = useState(false);
+
   return (
     <div className="App">
       <div>
         <NavBar navBarOpen={navBarOpen} setNavBarOpen={setNavBarOpen} />
-        <ImageSlider />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="portfolio/" element={<PhotoGrid />} />
+          <Route path="portfolio/:title" element={<SelectedPhotoGrid />} />
+          <Route path="videos/" element={<VideoPage />} />
+        </Routes>
       </div>
-      <About />
-      <ImageCarousel slides={SLIDES} options={OPTIONS} />
-      <Videos />
-      <InputForm />
     </div>
   );
 };

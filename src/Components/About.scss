@@ -21,10 +21,22 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 1rem;
+  align-items: center;
 }
 
 .about-right-section {
   justify-content: space-between;
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-section-container {
+    font-size: 0.9rem;
+  }
+
+  .about-title-container {
+    font-size: 4rem;
+  }
 }

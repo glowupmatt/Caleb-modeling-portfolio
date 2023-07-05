@@ -11,4 +11,7 @@ export const HeroImageSlider: { image: string }[] = [
   {
     image: "../../imageSlider/Photo_Mar_29.jpg",
   },
+  {
+    image: "../../imageSlider/Photo Jul 02 2021, 10 46 47 AM.png",
+  },
 ];
