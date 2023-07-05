@@ -17,7 +17,10 @@ const NavBar: React.FC<propsType> = ({
     setNavBarOpen((prev) => !prev);
   };
 
-  const [optionsOpened, setOptionsOpened] = useState(0);
+  const [optionsOpened, setOptionsOpened] = useState(-1);
+
+  console.log(optionsOpened);
+
   const navOptions = [
     {
       id: 0,
@@ -61,12 +64,14 @@ const NavBar: React.FC<propsType> = ({
         </div>
         <ul className="nav-desktop">
           {navOptions.map((option, index) => {
+            const optionsClickHandler = () => {
+              if (optionsOpened === option.id) {
+                setOptionsOpened(-1);
+              } else setOptionsOpened(option.id);
+            };
             return (
               <div className="nav-list" key={index}>
-                <li
-                  onClick={() => setOptionsOpened(option.id)}
-                  className="sub-nav-list"
-                >
+                <li onClick={optionsClickHandler} className="sub-nav-list">
                   {option.keyName}
                 </li>
                 <div className="nav-list">
