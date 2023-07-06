@@ -114,8 +114,8 @@ const NavBar: React.FC<propsType> = ({
           <ul className="mobile-nav" onClick={() => setNavBarOpen(false)}>
             <Link to="portfolio/">PORTFOLIO</Link>
             <Link to="videos/">VIDEO</Link>
-            <a href="about/">ABOUT</a>
-            <a href="#">CONTACT</a>
+            <Link to="about/">ABOUT</Link>
+            <Link to="contact/">CONTACT</Link>
           </ul>
         </motion.div>
       ) : (

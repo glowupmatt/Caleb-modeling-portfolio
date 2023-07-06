@@ -3,7 +3,6 @@ export const portfolioData = [
     {
       shootID: 0,
       title: "Lucky-Brand-&-Coca-Cola-Collab",
-      desc: "",
       photoArr: [
         "/AD/Lucky_Brand_x_Coca_Cola_Collab/LB_CC23C_Caleb_1_A.png",
         "/AD/Lucky_Brand_x_Coca_Cola_Collab/LB_CC23C_Caleb_1_B.png",
@@ -12,6 +11,7 @@ export const portfolioData = [
         "/AD/Lucky_Brand_x_Coca_Cola_Collab/LB_CC23C_Caleb_3_A.png",
         "/AD/Lucky_Brand_x_Coca_Cola_Collab/LB_CC23C_Caleb_2_C.png",
       ],
+      desc: "",
     },
     {
       shootID: 1,

@@ -1,32 +1,32 @@
 import React from "react";
 import "./Videos.scss";
+import { videoInfoArr } from "../calebData/videoPortfolio";
+import "./VideoPage.scss";
 
-const Videos = () => {
+type videoProps = {
+  data: {
+    videoSource: string;
+    title: string;
+    width: number;
+    height: number;
+    type: string;
+  };
+  index: number;
+};
+
+const Videos = ({ data, index }: videoProps) => {
   return (
     <div className="videos-container">
-      <h2 className="video-title-container">Video Work</h2>
-      <div className="iframe-container">
+      {/* <h2 className="video-title-container">Video Work</h2> */}
+      <div className="video-card-container">
         <iframe
-          src="https://www.youtube.com/embed/RclT8vcrZ3s"
-          width={300}
-          height={200}
+          src={data.videoSource}
+          width={data.width}
+          height={data.height}
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full"
-          title="SS23 My Name Is"
-        />
-        <iframe
-          width={300}
-          height={200}
-          src="https://www.youtube.com/embed/Lvu2B5BAOqQ"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          title="Napapijri Spring/Summer '20 Choose Future - The Tribe"
-        />
-        <iframe
-          width={300}
-          height={200}
-          src="https://www.youtube.com/embed/5fA9EmDl8nY"
-          title="iyla - 2LATE (Official Video)"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        />
+          title={data.title}
+          className="video-card-image"
+        ></iframe>
       </div>
     </div>
   );

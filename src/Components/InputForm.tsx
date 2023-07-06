@@ -69,7 +69,7 @@ const InputForm = () => {
     <div className="parent-input-form">
       <h2 className="form-header-container">Contact</h2>
       <form className="contact-input-form-container" onSubmit={onSubmitHandler}>
-        {inputFormArray.map((input) => (
+        {inputFormArray.map((input, index) => (
           <Input
             key={input.userInfoKey}
             input={input}
