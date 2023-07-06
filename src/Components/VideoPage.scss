@@ -1,9 +1,31 @@
 .video-side-menu {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  padding: 1rem;
-  margin-top: 2rem;
+  .video-scroll {
+    h2 {
+      display: grid;
+      text-align: center;
+      align-items: center;
+      text-shadow: -2px 5px 14px #000000;
+      color: white;
+    }
+  }
+  .video-title-list-name-container {
+    font-weight: bold;
+    font-size: 2rem;
+  }
+}
+
+.video-title-img-one {
+  height: 7.5rem;
+  background: no-repeat top/100%;
+  background-image: url(../../public/Headers/IMG_0493.webp);
+}
+
+.video-title-img-two {
+  height: 7.5rem;
+  background: no-repeat top/100%;
+  background-image: url(../../public/Headers/music-video-header.png);
 }
 
 .videos-container {
@@ -18,4 +40,7 @@
 
 .collection-container {
   display: flex;
+  overflow: scroll;
+  gap: 1rem;
+  padding: 1rem;
 }

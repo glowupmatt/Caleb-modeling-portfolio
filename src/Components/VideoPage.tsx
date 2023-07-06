@@ -8,18 +8,32 @@ const VideoPage = () => {
   return (
     <div className="video-page-container">
       <ul className="video-side-menu">
-        {videoType.map((data, index) => {
-          return (
-            <div>
-              <li className="title-list-name-container">{data}</li>
-              <div className="collection-container">
-                {videoInfoArr.map((data, index) => {
-                  return <Videos data={data} index={index} />;
-                })}
-              </div>
-            </div>
-          );
-        })}
+        <div className="video-scroll">
+          <div className="video-title-img-one">
+            <h2 className="video-title-list-name-container video-title-img-one">
+              {videoType[0]}
+            </h2>
+          </div>
+          <div className="collection-container">
+            {videoInfoArr
+              .filter((data) => data.type === videoType[0])
+              .map((data, index) => {
+                return <Videos data={data} index={index} />;
+              })}
+          </div>
+        </div>
+        <div className="video-scroll">
+          <h2 className="video-title-list-name-container video-title-img-two">
+            {videoType[1]}
+          </h2>
+          <div className="collection-container">
+            {videoInfoArr
+              .filter((data) => data.type === videoType[1])
+              .map((data, index) => {
+                return <Videos data={data} index={index} />;
+              })}
+          </div>
+        </div>
       </ul>
     </div>
   );

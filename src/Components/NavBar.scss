@@ -5,11 +5,13 @@
   width: 100%;
   background-color: rgba(170, 170, 170, 0.531);
   .logo-hamburger {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    z-index: 10;
     h2 {
       font-size: 1rem;
     }
@@ -33,14 +35,24 @@
     position: absolute;
     top: 5rem;
     .mobile-nav {
-      display: grid;
-      gap: 3rem;
-      width: 90%;
+      display: flex;
+      flex-direction: column;
+      right: 0;
+      gap: 4rem;
+      top: 0;
+      padding: 5rem;
+      position: fixed;
+      height: 100vh;
       justify-content: center;
-      align-items: center;
-      background-color: gray;
-      padding: 2rem;
-      border-radius: 1rem;
+      background: rgba(152, 152, 152, 0.8);
+      backdrop-filter: saturate(180%) blur(10px);
+      // gap: 3rem;
+      // width: 90%;
+      // justify-content: center;
+      // align-items: center;
+      // background-color: gray;
+      // padding: 2rem;
+      // border-radius: 1rem;
       a {
         list-style: none;
         text-align: center;

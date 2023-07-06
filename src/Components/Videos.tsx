@@ -23,7 +23,6 @@ const Videos = ({ data, index }: videoProps) => {
           src={data.videoSource}
           width={data.width}
           height={data.height}
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture full"
           title={data.title}
           className="video-card-image"
         ></iframe>
