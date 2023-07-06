@@ -3,11 +3,6 @@ import PhotoCard from "./PhotoCard";
 import { portfolioData } from "../calebData/portfolioData";
 import { useParams, Link } from "react-router-dom";
 
-// type selectedPhotoGridProps = {
-//   selected: string;
-//   setSelected: React.Dispatch<React.SetStateAction<string>>;
-// };
-
 const SelectedPhotoGrid = () => {
   const title = useParams();
   console.log(title.title);

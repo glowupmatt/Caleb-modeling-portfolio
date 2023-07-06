@@ -94,3 +94,46 @@ export const portfolioData = [
     },
   ],
 ];
+
+export const profilePhotos = {
+  shootID: 1,
+  title: "Profile Photos",
+  photoArr: [
+    {
+      id: 1,
+      photoId: "1",
+      img: "/Profile/profile-1.png",
+    },
+    {
+      id: 2,
+      photoId: "2",
+      img: "/Profile/profile-2.png",
+    },
+    {
+      id: 3,
+      photoId: "3",
+      img: "/Profile/profile-3.png",
+    },
+    {
+      id: 4,
+      photoId: "4",
+      img: "/Profile/profile-4.png",
+    },
+    {
+      id: 5,
+      photoId: "5",
+      img: "/Profile/profile-5.png",
+    },
+    {
+      id: 6,
+      photoId: "6",
+      img: "/Profile/profile-6.png",
+    },
+
+    {
+      id: 7,
+      photoId: "8",
+      img: "/Profile/profile-8.png",
+    },
+  ],
+};

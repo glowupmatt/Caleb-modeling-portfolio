@@ -8,6 +8,7 @@ import SelectedPhotoGrid from "./Components/SelectedPhotoGrid";
 import VideoPage from "./Components/VideoPage";
 import { About } from "./Components/About";
 import InputForm from "./Components/InputForm";
+import SelectedProfilePhoto from "./Components/SelectedProfilePhoto";
 
 const App = () => {
   const [navBarOpen, setNavBarOpen] = useState(false);
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="portfolio/" element={<PhotoGrid />} />
           <Route path="portfolio/:title" element={<SelectedPhotoGrid />} />
+          <Route path="profilePhotos/:id" element={<SelectedProfilePhoto />} />
           <Route path="videos/" element={<VideoPage />} />
           <Route path="about/" element={<About />} />
           <Route path="contact/" element={<InputForm />} />
