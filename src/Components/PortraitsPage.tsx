@@ -1,26 +1,24 @@
 import React, { useState } from "react";
 import { Link, useParams } from "react-router-dom";
-import { profilePhotos } from "../calebData/portfolioData";
-import "./SelectedProfilePhoto.scss";
-import PhotoCard from "./PhotoCard";
+import { portfolioPortraits } from "../calebData/portfolioData";
 
-const SelectedProfilePhoto = () => {
+const PortraitsPage = () => {
   const id = useParams();
   const newId = id.id;
   const [selected, setSelected] = useState(newId);
 
-  const filteredImage = profilePhotos.photoArr.filter(
+  const filteredImage = portfolioPortraits.photoArr.filter(
     (data) => data.photoId === selected
   );
 
   return (
     <div>
-      <h2 className="profile-photos-title">Profile Photos</h2>
+      <h2 className="profile-photos-title">{portfolioPortraits.title}</h2>
       <div className="profile-photo-container">
         <div className="profile-side-menu">
-          {profilePhotos.photoArr.map((data) => {
+          {portfolioPortraits.photoArr.map((data) => {
             return (
-              <Link to={`/profilePhotos/${data.photoId}`} key={data.photoId}>
+              <Link to={`/portraitPhotos/${data.photoId}`} key={data.photoId}>
                 <img
                   src={data.img}
                   alt={data.photoId}
@@ -36,27 +34,17 @@ const SelectedProfilePhoto = () => {
           })}
         </div>
         <div className="profile-collection-container">
-          <h2>Fittings</h2>
           {filteredImage.map((data) => (
             <img
               src={data.img}
-              alt={profilePhotos.title}
+              alt={portfolioPortraits.title}
               className="profile-collection-picture"
             />
           ))}
-          <ul className="size-list">
-            <li>Height: 5'10</li>
-            <li>Hair: Black</li>
-            <li>Eyes: Brown</li>
-            <li>JKT: 38</li>
-            <li>Shirt: Medium</li>
-            <li>Waist: 32</li>
-            <li>Shoe: 10</li>
-          </ul>
         </div>
       </div>
     </div>
   );
 };
 
-export default SelectedProfilePhoto;
+export default PortraitsPage;

@@ -1,7 +1,7 @@
 import React from "react";
 import { portfolioData } from "../calebData/portfolioData";
 import { Link, useParams } from "react-router-dom";
-import { profilePhotos } from "../calebData/portfolioData";
+import { profilePhotos, portfolioPortraits } from "../calebData/portfolioData";
 import "./PhotoCard.scss";
 
 const PhotoGrid = () => {
@@ -35,6 +35,26 @@ const PhotoGrid = () => {
             <Link
               className="link-styles"
               to={`/profilePhotos/${data.photoId}`}
+              key={index}
+            >
+              <img
+                alt={profilePhotos.title}
+                src={data.img}
+                className="portfolio-grid-image"
+              />
+            </Link>
+          );
+        })}
+      </div>
+      <div className="portfolio-title">
+        <h2>Portraits</h2>
+      </div>
+      <div className="portfolio-container-scroll">
+        {portfolioPortraits.photoArr.map((data, index) => {
+          return (
+            <Link
+              className="link-styles"
+              to={`/portraitPhotos/${data.photoId}`}
               key={index}
             >
               <img

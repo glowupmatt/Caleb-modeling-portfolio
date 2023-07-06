@@ -102,38 +102,92 @@ export const profilePhotos = {
     {
       id: 1,
       photoId: "1",
-      img: "/Profile/profile-1.png",
+      img: "/Profile/profile-8.png",
     },
     {
       id: 2,
       photoId: "2",
-      img: "/Profile/profile-2.png",
+      img: "/Profile/profile-4.png",
     },
-    {
-      id: 3,
-      photoId: "3",
-      img: "/Profile/profile-3.png",
-    },
+
     {
       id: 4,
       photoId: "4",
-      img: "/Profile/profile-4.png",
-    },
-    {
-      id: 5,
-      photoId: "5",
-      img: "/Profile/profile-5.png",
-    },
-    {
-      id: 6,
-      photoId: "6",
       img: "/Profile/profile-6.png",
     },
 
     {
-      id: 7,
+      id: 5,
+      photoId: "5",
+      img: "/Profile/profile-7.png",
+    },
+    {
+      id: 8,
       photoId: "8",
-      img: "/Profile/profile-8.png",
+      img: "/Profile/profile-9.png",
+    },
+    {
+      id: 9,
+      photoId: "9",
+      img: "/Profile/profile-10.png",
+    },
+  ],
+};
+export const portfolioPortraits = {
+  shootID: 2,
+  title: "Portfolio Portraits",
+  photoArr: [
+    {
+      id: 1,
+      photoId: "1",
+      img: "/portraits/portrait-1.png",
+    },
+    {
+      id: 2,
+      photoId: "2",
+      img: "/portraits/portrait-2.png",
+    },
+
+    {
+      id: 3,
+      photoId: "3",
+      img: "/portraits/portrait-3.png",
+    },
+
+    {
+      id: 4,
+      photoId: "4",
+      img: "/portraits/portrait-4.png",
+    },
+    {
+      id: 5,
+      photoId: "5",
+      img: "/portraits/portrait-5.png",
+    },
+    {
+      id: 6,
+      photoId: "6",
+      img: "/portraits/portrait-6.png",
+    },
+    {
+      id: 7,
+      photoId: "7",
+      img: "/portraits/portrait-7.png",
+    },
+    {
+      id: 8,
+      photoId: "8",
+      img: "/portraits/portrait-8.png",
+    },
+    {
+      id: 9,
+      photoId: "9",
+      img: "/portraits/portrait-9.png",
+    },
+    {
+      id: 10,
+      photoId: "10",
+      img: "/portraits/portrait-10.png",
     },
   ],
 };
