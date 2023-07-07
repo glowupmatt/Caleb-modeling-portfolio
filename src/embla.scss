@@ -118,14 +118,9 @@
   z-index: 1;
   color: var(--background-site);
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  top: 73rem;
-  transform: translateY(-50%);
+
+  transform: translateY(-10rem);
   cursor: pointer;
-  width: 2rem;
-  height: 4rem;
 }
 @media (min-width: 768px) {
   .embla__button {
