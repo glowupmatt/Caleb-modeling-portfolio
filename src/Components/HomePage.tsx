@@ -16,7 +16,6 @@ const HomePage = () => {
       <div className="mobile-home">
         <About />
         <ImageCarousel slides={SLIDES} options={OPTIONS} />
-        <InputForm />
       </div>
     </div>
   );

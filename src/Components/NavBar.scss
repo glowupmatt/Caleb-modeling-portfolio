@@ -3,6 +3,8 @@
   top: 0;
   z-index: 50;
   width: 100%;
+  background: rgba(152, 152, 152, 0.8);
+
   background-color: rgba(170, 170, 170, 0.531);
   .logo-hamburger {
     position: relative;
@@ -12,6 +14,7 @@
     align-items: center;
     padding: 1rem;
     z-index: 10;
+
     h2 {
       font-size: 1rem;
     }
