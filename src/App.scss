@@ -16,9 +16,16 @@
   background-color: rgb(180 180 180 / 39%);
 }
 
+.home-page-container {
+  overflow: scroll;
+}
+
 @media (min-width: 1024px) {
   .mobile-home {
     display: none;
+  }
+  .desktop-class {
+    display: flex;
   }
 }
 .link-styles {

@@ -14,7 +14,7 @@ const SelectedPhotoGrid = () => {
         {portfolioData[0].map((data) => {
           return (
             <Link
-              to={`/portfolio/${data.title}`}
+              to={`/adWork/${data.title}`}
               className="link-styles"
               key={data.title}
             >

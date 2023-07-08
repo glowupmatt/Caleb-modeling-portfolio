@@ -72,9 +72,8 @@
   }
   .nav-container {
     background-color: RGB(255, 253, 228);
-    width: 26.875rem;
-    height: 100vh;
-    position: absolute;
+    width: auto;
+    position: relative;
 
     .logo-hamburger {
       display: flex;
@@ -82,6 +81,9 @@
       position: relative;
       align-items: flex-start;
       padding: 3rem;
+      height: 100vh;
+      gap: 5rem;
+      width: 26rem;
       h2 {
         font-size: 3rem;
       }
@@ -91,10 +93,10 @@
       .nav-desktop {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+
         height: 100%;
         gap: 2rem;
-        margin-top: 4rem;
+
         text-decoration: none;
         .nav-list {
           display: flex;

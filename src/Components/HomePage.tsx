@@ -11,8 +11,9 @@ const HomePage = () => {
   const SLIDE_COUNT = 5;
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
   return (
-    <div>
+    <div className="home-page-container">
       <ImageSlider />
+
       <div className="mobile-home">
         <About />
         <ImageCarousel slides={SLIDES} options={OPTIONS} />

@@ -25,12 +25,34 @@ const NavBar: React.FC<propsType> = ({
     {
       id: 0,
       keyName: "PORTFOLIO",
-      listOptions: ["PORTRAIT", "FASHION", "AD WORK"],
+      listOptions: [
+        {
+          name: "AD WORK",
+          link: "adWork/",
+        },
+        {
+          name: "PROFILE PHOTOS",
+          link: "profilePhotos/",
+        },
+        {
+          name: "PORTRAITS",
+          link: "portraitPhotos/",
+        },
+      ],
     },
     {
       id: 1,
       keyName: "VIDEO",
-      listOptions: ["MUSIC VIDEO", "AD WORK"],
+      listOptions: [
+        {
+          name: "MUSIC VIDEOS",
+          link: "videos/",
+        },
+        {
+          name: "AD WORK",
+          link: "videos/",
+        },
+      ],
     },
     {
       id: 2,
@@ -71,24 +93,35 @@ const NavBar: React.FC<propsType> = ({
             };
             return (
               <div className="nav-list" key={index}>
-                <li onClick={optionsClickHandler} className="sub-nav-list">
-                  {option.keyName}
-                </li>
+                {option.listOptions.length < 1 ? (
+                  <Link
+                    to={option.keyName}
+                    onClick={optionsClickHandler}
+                    className="sub-nav-list"
+                  >
+                    {option.keyName}
+                  </Link>
+                ) : (
+                  <li onClick={optionsClickHandler} className="sub-nav-list">
+                    {option.keyName}
+                  </li>
+                )}
                 <div className="nav-list">
                   {option.listOptions.map((item) => {
                     if (option.id === index) {
                       return (
-                        <li
-                          key={item}
+                        <Link
+                          to={item.link}
+                          key={item.name}
                           className={
                             optionsOpened === index ? "list-open" : "list-close"
                           }
                         >
-                          {item}
-                        </li>
+                          {item.name}
+                        </Link>
                       );
                     } else {
-                      <li>{item}</li>;
+                      <li>{item.name}</li>;
                     }
                   })}
                 </div>

@@ -60,6 +60,40 @@
   margin-top: 2rem;
 }
 
+@media (min-width: 1024px) {
+  .card-container {
+    gap: 0.5rem;
+    align-items: center;
+    margin-left: 0;
+  }
+  .side-menu {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding: 1rem;
+    background: gray;
+    width: 100%;
+    margin-top: 0;
+    height: 4rem;
+    justify-content: center;
+    align-items: center;
+    .title-list-name-container,
+    .title-list-name-container-selected {
+      font-size: 1rem;
+    }
+  }
+  .collection-container {
+    height: auto;
+  }
+  .grid-container {
+    height: 100vh;
+    display: grid;
+
+    width: 100%;
+  }
+}
+
 .title-list-name-container {
   font-size: 0.6rem;
   list-style: none;

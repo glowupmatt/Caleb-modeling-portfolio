@@ -13,7 +13,11 @@ const PhotoGrid = () => {
       <div className="portfolio-container-scroll">
         {portfolioData[0].map((data, index) => {
           return (
-            <Link className="link-styles" to={`${data.title}`} key={index}>
+            <Link
+              className="link-styles"
+              to={`/adWork/${data.title}`}
+              key={index}
+            >
               <img
                 alt={data.title}
                 src={data.photoArr[0]}
