@@ -14,7 +14,7 @@ const VideoPage = () => {
               {videoType[0]}
             </h2>
           </div>
-          <div className="collection-container">
+          <div className="video-collection-container">
             {videoInfoArr
               .filter((data) => data.type === videoType[0])
               .map((data, index) => {
@@ -23,10 +23,12 @@ const VideoPage = () => {
           </div>
         </div>
         <div className="video-scroll">
-          <h2 className="video-title-list-name-container video-title-img-two">
-            {videoType[1]}
-          </h2>
-          <div className="collection-container">
+          <div className="video-title-img-two">
+            <h2 className="video-title-list-name-container video-title-img-two">
+              {videoType[1]}
+            </h2>
+          </div>
+          <div className="video-collection-container">
             {videoInfoArr
               .filter((data) => data.type === videoType[1])
               .map((data, index) => {

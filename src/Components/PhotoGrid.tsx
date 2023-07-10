@@ -7,7 +7,7 @@ import "./PhotoCard.scss";
 const PhotoGrid = () => {
   return (
     <div className="portfolio-container">
-      <div className="portfolio-title">
+      <div className="portfolio-title-one">
         <h2>Ad Work</h2>
       </div>
       <div className="portfolio-container-scroll">
@@ -30,7 +30,7 @@ const PhotoGrid = () => {
           );
         })}
       </div>
-      <div className="portfolio-title">
+      <div className="portfolio-title-two">
         <h2>Profile Photos</h2>
       </div>
       <div className="portfolio-container-scroll">
@@ -50,7 +50,7 @@ const PhotoGrid = () => {
           );
         })}
       </div>
-      <div className="portfolio-title">
+      <div className="portfolio-title-three">
         <h2>Portraits</h2>
       </div>
       <div className="portfolio-container-scroll">

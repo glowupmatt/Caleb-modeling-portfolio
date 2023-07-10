@@ -18,7 +18,7 @@ const AdWorkPage = () => {
           return (
             <Link
               to={`/adWork/${data.title}`}
-              className="ad-work-card-container"
+              className="ad-work-card-container link-styles "
             >
               <img
                 alt={data.title}

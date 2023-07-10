@@ -42,17 +42,8 @@ const NavBar: React.FC<propsType> = ({
     },
     {
       id: 1,
-      keyName: "VIDEO",
-      listOptions: [
-        {
-          name: "MUSIC VIDEOS",
-          link: "videos/",
-        },
-        {
-          name: "AD WORK",
-          link: "videos/",
-        },
-      ],
+      keyName: "VIDEOS",
+      listOptions: [],
     },
     {
       id: 2,
@@ -97,12 +88,15 @@ const NavBar: React.FC<propsType> = ({
                   <Link
                     to={option.keyName}
                     onClick={optionsClickHandler}
-                    className="sub-nav-list"
+                    className="sub-nav-list link-styles"
                   >
                     {option.keyName}
                   </Link>
                 ) : (
-                  <li onClick={optionsClickHandler} className="sub-nav-list">
+                  <li
+                    onClick={optionsClickHandler}
+                    className="sub-nav-list link-styles"
+                  >
                     {option.keyName}
                   </li>
                 )}
@@ -114,7 +108,9 @@ const NavBar: React.FC<propsType> = ({
                           to={item.link}
                           key={item.name}
                           className={
-                            optionsOpened === index ? "list-open" : "list-close"
+                            optionsOpened === index
+                              ? "list-open link-styles"
+                              : "list-close link-styles"
                           }
                         >
                           {item.name}

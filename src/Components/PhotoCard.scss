@@ -3,11 +3,12 @@
   flex-direction: column;
   gap: 0.5rem;
   overflow: scroll;
-  .portfolio-title {
+  .portfolio-title-one,
+  .portfolio-title-two,
+  .portfolio-title-three {
     color: white;
-    height: 10rem;
+    height: 7rem;
     background: no-repeat top/100%;
-    background-image: url(../../public/Headers/union_4.png);
     h2 {
       height: 100%;
       display: grid;
@@ -15,6 +16,15 @@
       align-items: center;
       text-shadow: -2px 5px 14px #000000;
     }
+  }
+  .portfolio-title-one {
+    background-image: url(../../public/Headers/header-2.png);
+  }
+  .portfolio-title-two {
+    background-image: url(../../public/Headers/header-3.png);
+  }
+  .portfolio-title-three {
+    background-image: url(../../public/Headers/header-4.png);
   }
   .portfolio-container-scroll {
     display: flex;
@@ -60,8 +70,9 @@
   margin-top: 2rem;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .card-container {
+    padding: 1rem;
     gap: 0.5rem;
     align-items: center;
     margin-left: 0;
@@ -70,18 +81,18 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    gap: 4rem;
+    gap: 1rem;
     padding: 1rem;
-    background: gray;
     width: 100%;
     margin-top: 0;
     height: 4rem;
     justify-content: center;
     align-items: center;
-    .title-list-name-container,
-    .title-list-name-container-selected {
-      font-size: 1rem;
-    }
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(11.4px);
+    -webkit-backdrop-filter: blur(11.4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
   }
   .collection-container {
     height: auto;
@@ -89,7 +100,7 @@
   .grid-container {
     height: 100vh;
     display: grid;
-
+    overflow: scroll;
     width: 100%;
   }
 }
@@ -115,4 +126,11 @@
 
 .video-card-image {
   border: none;
+}
+
+@media (min-width: 1024px) {
+  .title-list-name-container,
+  .title-list-name-container-selected {
+    font-size: 1rem;
+  }
 }

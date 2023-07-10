@@ -27,8 +27,8 @@ const SelectedProfilePhoto = () => {
                   onClick={() => setSelected(data.photoId)}
                   className={
                     selected === data.photoId
-                      ? "selected-photo-side-guide"
-                      : "photo-side-guide"
+                      ? "selected-photo-side-guide link-styles "
+                      : "photo-side-guide link-styles "
                   }
                 />
               </Link>

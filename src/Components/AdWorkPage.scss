@@ -5,15 +5,15 @@
   overflow: scroll;
   .text-container {
     padding: 2rem;
+    color: black;
     h2 {
       z-index: 1;
       text-shadow: 13px 4px 22px white;
       font-size: 2rem;
-      color: white;
+
       margin-bottom: 1rem;
     }
     p {
-      color: white;
     }
   }
 }
@@ -23,7 +23,7 @@
   display: grid;
   grid-template-columns: repeat(3, 32%);
   grid-template-rows: repeat(3, auto);
-  align-items: center;
+  align-items: flex-end;
   justify-items: center;
   .ad-work-card-container {
     display: flex;

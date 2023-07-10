@@ -69,3 +69,15 @@
   position: absolute;
   height: 88%;
 }
+
+@media (min-width: 768px) {
+  .parent-input-form {
+    height: auto;
+  }
+  form {
+    width: 60%;
+  }
+  .contact-input-form-container {
+    width: 80%;
+  }
+}

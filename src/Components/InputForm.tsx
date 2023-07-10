@@ -8,13 +8,14 @@ export type userInfoType = {
   name: string;
   email: string;
   phoneNumber: string;
+  moreInfo: string;
 };
 
 export type inputFormArrayType = {
   userInfoKey: keyof userInfoType;
   inputType: string;
   placeHolder: string;
-  pattern: string;
+  pattern?: string;
 };
 
 const InputForm = () => {
@@ -22,6 +23,7 @@ const InputForm = () => {
     name: "",
     email: "",
     phoneNumber: "",
+    moreInfo: "",
   });
 
   const [focused, setFocused] = useState(false);
@@ -33,6 +35,7 @@ const InputForm = () => {
         name: userInfo.name,
         email: userInfo.email,
         phoneNumber: userInfo.phoneNumber,
+        moreInfo: userInfo.moreInfo,
       });
     } catch (err) {
       console.error(err);
@@ -41,6 +44,7 @@ const InputForm = () => {
       name: "",
       email: "",
       phoneNumber: "",
+      moreInfo: "",
     });
   };
 
@@ -49,19 +53,22 @@ const InputForm = () => {
       userInfoKey: "name",
       inputType: "text",
       placeHolder: "Name",
-      pattern: "",
     },
     {
       userInfoKey: "email",
       inputType: "email",
       placeHolder: "Email Address",
-      pattern: "",
     },
     {
       userInfoKey: "phoneNumber",
       inputType: "number",
       placeHolder: "Phone (012-345-1234)",
       pattern: "^(+d{1,2}s)?(?d{3})?[s.-]d{3}[s.-]d{4}$",
+    },
+    {
+      userInfoKey: "moreInfo",
+      inputType: "textfield",
+      placeHolder: "Your Message",
     },
   ];
 
